@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load static %}
+    {% block content %}
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mullai Enterprises</title>
-    <link rel="icon" href= "{% static 'icon.png' %}" type="images/x-icon">
 </head>
-<body>
-    
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    .coloumn{
+        float: left;
+        width: 33.33%;
+        padding: 10px;
+        height: 310px;
+        
+    }
+    .gfg{
+        margin: 3%;
+        position: relative;
+    }
+    .first-text{
+        position: absolute;
+        top: 17px;
+        left: 50px;
+        background-color: black;
+        color: beige;
+    }
+</style>
+<body>{% load static %}
+<h2>Mullai Enterprises</h2>
+<h3>Explore What we Have</h3>
+<div class=row>
+    <div class=coloumn style="background-color: aqua;">     
+        <div class="gfg">
+            <img src= "{% static 'icon.png' %}" width="50%">
+            <h3 class="first-text"> Special Offer </h3>
+        </div>
+    </div>
+</div>
+{% endblock %}
 </body>
 </html>

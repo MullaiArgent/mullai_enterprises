@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+class products:
+    name : str
+    price : int
+    des : str
+    img : str
