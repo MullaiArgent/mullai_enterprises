@@ -1,7 +1,8 @@
 from django.db import models
 
-class products:
-    name : str
-    price : int
-    des : str
-    img : str
+class products(models.Model):
+    name = models.CharField(max_length=100)
+    desc = models.TextField()
+    price = models.IntegerField()
+    offer = models.BooleanField(default=False)
+    img = models.ImageField(upload_to='pics')
